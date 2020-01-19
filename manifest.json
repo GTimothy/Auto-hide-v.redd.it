@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Auto-hide v.redd.it",
+  "short_name": "AH v.redd.it",
+  "version": "1.0",
+  "developer": {
+    "name": "GTimothy",
+    "url": "https://github.com/GTimothy"
+  },
+  "description": "Hide video posts on reddit hosted on v.redd.it.",
+  "icons": {
+    "32": "icons/hos-hide-32.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.reddit.com/*"],
+      "js": ["hide-v.redd.it.js"]
+    }
+  ],
+  "browser_action": {
+    "default_icon": "icons/hos-hide-32.png",
+    "default_title": "Hide v.redd.it!"
+  }
+}
